@@ -5,8 +5,6 @@
 //! Building and parsing a metainfo file from a directory:
 //!
 //! ```rust
-//!     extern crate bip_metainfo;
-//!
 //!     use bip_metainfo::{MetainfoBuilder, Metainfo};
 //!
 //!     fn main() {
@@ -28,8 +26,6 @@
 //! Building and parsing a metainfo file from direct data:
 //!
 //! ```rust
-//!     extern crate bip_metainfo;
-//!
 //!     use bip_metainfo::{MetainfoBuilder, Metainfo, DirectAccessor};
 //!
 //!     fn main() {
@@ -79,6 +75,6 @@ pub mod iter;
 
 pub use bip_util::bt::InfoHash;
 
-pub use accessor::{Accessor, IntoAccessor, DirectAccessor, FileAccessor, PieceAccess};
-pub use builder::{MetainfoBuilder, PieceLength, InfoBuilder};
-pub use metainfo::{Info, Metainfo, File};
+pub use accessor::{Accessor, DirectAccessor, FileAccessor, IntoAccessor, PieceAccess};
+pub use builder::{InfoBuilder, MetainfoBuilder, PieceLength};
+pub use metainfo::{File, Info, Metainfo};
